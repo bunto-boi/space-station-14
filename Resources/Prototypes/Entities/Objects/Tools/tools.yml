@@ -534,3 +534,29 @@
   - type: Tag
     tags:
     - RollingPin
+
+#sussyBalls
+- type: entity
+  parent: BaseItem
+  id: EpicAmongus
+  name: EpicAmongus
+  description: I have no idea man
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/pequeno.rsi
+    layers:
+    - state: base
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+    - state: visor
+  - type: RandomSprite
+    available:
+      - enum.DamageStateVisualLayers.Base:
+          base: Sixteen
+  - type: Item
+  - type: UseDelay
+    delay: 0.5
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 400
